@@ -8,3 +8,4 @@ jq
 sentence-transformers
 gradio
 yt_dlp
+numpy
