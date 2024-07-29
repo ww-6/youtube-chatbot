@@ -194,8 +194,9 @@ def create_vectordb(data, n_retrieved_docs: int, collection_name="YouTube"):
 
 """Load LLM"""
 
-repo_id = "mistralai/Mistral-7B-Instruct-v0.1"
+repo_id = "mistralai/Mistral-7B-Instruct-v0.3"
 llm = HuggingFaceHub(repo_id=repo_id, model_kwargs={"max_new_tokens": 1000})
+llm.client.api_url = 'https://api-inference.huggingface.co/models/mistralai/Mistral-7B-Instruct-v0.3'
 
 
 
